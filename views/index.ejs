@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="gr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Kappari Serres</title>
+</head>
+<body>    
+    <%- include('partials/header') %>
+
+    <header>
+        <img src="/90f4150shjbevnlkbtzb-md.webp" />
+        <h1 class="text-shadowed">Welcome to Kappari</h1>
+        <h2 class="text-shadowed">We serve delicious meals</h2>
+        <a>Book a table</a>
+    </header>
+
+    <section id="description">
+        <img src="/Screenshot from 2024-11-17 11-28-17.png" />
+        <h2>Kappari Serres</h2>
+        <p>Our restaurant is located at Serres, at Konstantinoupoleos 29 near IKA.</p>  
+        <p>Savor deliciously prepared meals, fresh fish, traditional ouzo appetizers, grilled meats, and a variety of mouthwatering starters.</p> 
+        <p>Join us daily in a warm and inviting atmosphere, where you can enjoy stunning views of the sea.</p>
+    </section>
+
+    <section id="comment">
+        <div id="rimg"></div>
+        <h2 class="text-shadowed">"Fresh ingredients, warm ambiance, unforgettable dining experience."</h2>
+    </section>
+
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptates similique cumque. Magni atque neque magnam modi ducimus? Quis, nihil?</p>
+    </section>
+
+    <%- include('partials/map') %>
+
+    <%- include('partials/footer') %>
+    
+    <script>
+        let home = document.querySelector('#home');
+        home.style.borderBottom = '3px solid gold';
+    </script>
+
+</body>
+</html>

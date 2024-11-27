@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Kappari</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/gallery.css" />
+</head>
+<body>
+    
+    <%- include('partials/header') %>
+
+    <h1 class="header-title text-shadowed"><%= title %></h1>
+
+
+    <div id="grid-container">
+        <img src="/gallery/caption (1).jpg" alt="food" id="f1">
+        <img src="/gallery/caption (17).jpg" alt="food">
+        <img src="/gallery/caption (14).jpg" alt="food">
+        <img src="/gallery/caption (2).jpg" alt="food">
+        <img src="/gallery/caption (8).jpg" alt="food">
+        <img src="/gallery/photo1jpg.jpg" alt="food" id="f6">
+    </div>
+
+    <button id="SM">See more...</button>
+
+    <div id="platform">
+        <button id="prev"> &lt; </button>
+        <img src="/gallery/001315-largejpg.jpg" alt="food" />
+        <button id="next"> &gt; </button>
+    </div>
+
+
+    <%- include('partials/map') %>
+
+    <%- include('partials/footer') %>
+
+    <script>
+
+        let img = document.querySelector('#platform img');
+        let imgSrcArray = [
+            "001315-largejpg.jpg",  
+            "caption (14).jpg",  
+            "caption (1).jpg",  
+            "caption (6).jpg",   
+            "chickpeas.jpg",                 
+            "photo1jpg.jpg",
+            "received-1364704106906237.jpg",
+            "caption (10).jpg",    
+            "caption (15).jpg",  
+            "caption (2).jpg",  
+            "caption (7).jpg",   
+            "excellent-food.jpg",           
+            "photo2jpg (1).jpg",              
+            "sardines.jpg",
+            "caption (11).jpg",    
+            "caption (16).jpg",  
+            "caption (3).jpg",  
+            "caption (8).jpg",   
+            "img-20190504-232906-636.jpg",   
+            "photo2jpg.jpg",                  
+            "the-main-hall (1).jpg",
+            "caption (12).jpg",    
+            "caption (17).jpg",  
+            "caption (4).jpg",  
+            "caption (9).jpg",  
+            "photo0jpg (1).jpg",            
+            "photo3jpg.jpg",                   
+            "the-main-hall.jpg",
+            "caption (13).jpg",    
+            "caption (18).jpg",  
+            "caption (5).jpg",   
+            "caption.jpg",        
+            "photo0jpg.jpg",                 
+            "received-1364703880239593.jpg"
+        ]
+        let i = 0;
+        
+        document.querySelector('#prev').addEventListener('click', () => {
+            if (i>0) {
+                i--;
+            }
+            img.src = "/gallery/" + imgSrcArray[i];
+        });
+        
+        document.querySelector('#next').addEventListener('click', () => {
+            if (i<imgSrcArray.length-1) {
+                i++;
+            }
+            img.src = "/gallery/" + imgSrcArray[i];
+        });
+
+        document.querySelector('#platform').addEventListener('click', (event) => {
+            if (event.target.id === "platform") {
+                platform.style.display = "none";
+            }
+        });
+
+        document.querySelector('#SM').addEventListener('click', () => {
+            platform.style.display = "flex";
+        });
+
+
+    </script>
+
+</body>
+</html>
