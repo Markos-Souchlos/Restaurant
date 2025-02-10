@@ -6,12 +6,33 @@
     /* background-color: red; */
 }
 
+#gmail-message {
+    position:fixed;
+    top: -150px;
+    left:50%;
+    transform: translate(-50%, 0%);
+    width:80%;
+    max-width:500px;
+    background-color: #359f36;
+    height:60px;
+    border-radius: 15px;
+    text-align: center;
+    align-content: center;
+    z-index: 3;
+    font-size: 18px;
+}
+
+.gmv {
+    top:0px !important;
+    transition: all 1s linear;
+}
+
 #contact-us, #comment {
     text-align: center;
 }
 
 h3 {
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 100px;
 }
 

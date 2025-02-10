@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Kappari Serres</title>
 </head>
@@ -24,13 +25,33 @@
         <p>Join us daily in a warm and inviting atmosphere, where you can enjoy stunning views of the sea.</p>
     </section>
 
-    <section id="comment">
+    <section id="imgcomment">
         <div id="rimg"></div>
         <h2 class="text-shadowed">"Fresh ingredients, warm ambiance, unforgettable dining experience."</h2>
     </section>
 
-    <section>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur voluptates similique cumque. Magni atque neque magnam modi ducimus? Quis, nihil?</p>
+    <section id="reviews">
+        <img src="/icons8-quotes-100.png" alt="quotes" />
+        <div class="visible">
+            <p>Truly Greek cuisine with fresh ingredients, cooked perfectly with a modern twist. A must visit restaurant if you are around and you want to taste authentic dishes</p>
+            <p class="gmra">-- Kostas Patmanidis</p>
+        </div>
+        <div>
+            <p>Great place, we stopped to eat in Serres from the road  and were surprised. The food is excellent, portions are big. All dishes were masterfully  done and very delicately salted</p>
+            <p class="gmra">-- Peter Shchuchkin</p>
+        </div>
+        <div>
+            <p>Worth every penny! It's definitely a MUST TASTE! :)</p>
+            <p class="gmra">-- Vlad Diaconu</p>
+        </div>
+        <div>
+            <p>People who work here are nice would recommend 100% to greeks and tpurists who come here. Food great prices good, service excellent!</p>
+            <p class="gmra">-- Michalis Sakoulas</p>
+        </div>
+        <div>
+            <p>Solid 5 star! Went there by accident, but for sure would visit it again. Great food, service and free desert.</p>
+            <p class="gmra">-- Ivo T</p>
+        </div>
     </section>
 
     <%- include('partials/map') %>
@@ -40,6 +61,19 @@
     <script>
         let home = document.querySelector('#home');
         home.style.borderBottom = '3px solid gold';
+
+        let rpArray = document.querySelectorAll('#reviews div');
+        let pos = 0;
+        rpArray[0].style.display = 'block';
+
+
+        setInterval(() => {
+            rpArray[pos].classList.toggle('visible');
+            pos = (pos + 1) % rpArray.length;
+            rpArray[pos].classList.toggle('visible');
+        }, 10 * 1000);
+
+
     </script>
 
 </body>

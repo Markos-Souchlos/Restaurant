@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
     <title>Gallery | Kappari</title>
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/gallery.css" />
@@ -38,6 +39,8 @@
 
     <script>
 
+        let gallery = document.querySelector('#gallery');
+        gallery.style.borderBottom = '3px solid gold';
         let img = document.querySelector('#platform img');
         let imgSrcArray = [
             "001315-largejpg.jpg",  
@@ -77,7 +80,7 @@
         ]
         let i = 0;
         
-        document.querySelector('#prev').addEventListener('click', () => {
+        document.querySelector('#prev').addEventListener("click", () => {
             if (i>0) {
                 i--;
             }

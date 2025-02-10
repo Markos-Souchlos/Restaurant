@@ -1,10 +1,12 @@
 #menu-cont {
     background-color: #00000057;
+    /* background-color: rgb(70, 70, 70); */
     margin: 100px auto 0px;
     padding: 10px;
 }
 
 .category {
+    /* border:1px solid purple; */
     /* background-color: blue; */
     max-width: 1000px;
     margin: auto;
@@ -15,6 +17,7 @@
 }
 
 h2 {
+    /* background-color: rgb(40, 121, 0); */
     text-align: center;
     color: #cccccc;
     font-size: 25px;
@@ -23,32 +26,46 @@ h2 {
 
 
 .card img {
-    width: 150px;
+    width: 70px;
     /* min-width: 150px; */
-    height: 150px;
+    height: 70px;
     object-fit: cover;
     object-position: center;
 }
 
 .card {
+    /* background-color: red; */
     display: flex;
     /* border: 1px solid #ffffff; */
-    margin: 30px auto;
-    width: 90%;
-    max-width: 400px;
+    margin: 10px auto;
+    width: 95%;
+    max-width: 350px;
     align-items: center;
     position: relative;
 }
 
+h3 {
+    /* background-color: blue; */
+    margin:0px 0px 10px 0px;
+    position: relative;
+    top:-15px;
+}
+
+small {
+    position: relative;
+    top:-10px;
+    color: rgba(128, 128, 128, 0.828)
+}
+
 .info {
-    /* background-color: red; */
-    padding: 0px 20px 0px 20px;
+    /* background-color: purple; */
+    padding: 20px;
 }
 
 .price {
     position: absolute;
     right: 10px;
-    bottom:0px;
+    bottom:-10px;
     color:gold
 }
 
@@ -66,5 +83,14 @@ hr {
         border-radius: 10px;
         width: 90%;
         max-width: 1000px;
+    }
+
+    .card {
+        margin:30px auto;
+    }
+
+    .card img {
+        width:100px;
+        height:100px;
     }
 }

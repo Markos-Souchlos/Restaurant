@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
     <title>Reservetion | Kappari</title>
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/reservetion.css" />
 </head>
 <body>
+
+    <div id="gmail-message">
+        <p>Your message was sent succesfully!</p>
+    </div>
     
     <%- include('partials/header') %>
 
@@ -45,7 +50,7 @@
         </div>
         <div class="txt">
             <label for="extra-info">Message</label>
-            <input type="number" placeholder="Write a message" id="extra-info" name="msg" autocomplete="off">
+            <input type="text" placeholder="Write a message" id="extra-info" name="msg" autocomplete="off">
         </div>
         <input type="submit" value="Submit" id="submit">
     </form>
@@ -53,6 +58,23 @@
     <%- include('partials/map') %>
 
     <%- include('partials/footer') %>
+
+
+    <script>
+        let reservation = document.querySelector('#reservation');
+        reservation.style.borderBottom = '3px solid gold';
+
+        const submited = <%= submited %>;
+        console.log(submited);
+
+        if (submited) {
+            document.querySelector('#gmail-message').classList.add('gmv');
+            setTimeout(() => {
+            document.querySelector('#gmail-message').classList.remove('gmv');
+            }, 3000);
+        }
+
+    </script>
 
 </body>
 </html>
